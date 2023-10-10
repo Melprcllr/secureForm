@@ -12,22 +12,22 @@
     <div>
     <br>
       <label  for="nom">Nom :</label>
-      <input  type="text"  id="nom"  name="user_name" requiered placeholder="Nom">
+      <input  type="text"  id="nom"  name="user_name" placeholder="Nom" requiered>
     </div>
     <div>
     <br>
       <label  for="prenom">Prénom :</label>
-      <input  type="text"  id="prenom"  name="user_firstname" requiered minlength="1" maxlength="30" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Prénom">
+      <input  type="text"  id="prenom"  name="user_firstname" minlength="1" maxlength="30" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Prénom" requiered>
     </div>
     <div>
     <br>
       <label  for="courriel">Courriel :</label>
-        <input  type="email"  id="courriel"  name="user_email" requiered placeholder="email">
+        <input  type="email"  id="courriel"  name="user_email" placeholder="email" requiered>
     </div>
     <div>
     <br>
       <label  for="numberTel">Numéro de téléphone :</label>
-        <input  type="number" id="number"  name="user_number" requiered placeholder="Numéro de téléphone">
+        <input  type="number" id="number"  name="user_number" placeholder="Numéro de téléphone" requiered>
     </div>
 
     <div>

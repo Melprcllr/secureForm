@@ -7,6 +7,22 @@
 </head>
 <div>
 <?php
+
+// Vérifie si tous les champs sont remplis
+if (empty($_POST['user_name']) || empty($_POST['user_firstname']) || empty($_POST['user_email']) || empty($_POST['user_number']) || empty($_POST['sujet']) || empty($_POST['user_message'])) {
+    // Affiche un message d'erreur
+    echo "Tous les champs sont obligatoires." . "<br>"?> <a href="form.php">Compléter le formulaire</a>
+    <?php exit();
+} ?>
+
+<?php 
+if (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
+    echo "L'adresse email n'est pas valide." . "<br>" . "Veuillez renseigner une adresse email valide" .  "<br>"?> <a href="form.php">Compléter le formulaire</a>
+    <?php exit();
+}
+?>
+
+<?php
 $name = $_POST["user_name"];
 $prenom = $_POST["user_firstname"];
 $courriel = $_POST["user_email"];
@@ -25,7 +41,8 @@ echo " dans les plus brefs délais pour traiter votre demande : " ."<br>";
 echo $message."<br>";
 ?>
 </p>
-          </div>
+
+</div>
  <p>
     <a href="form.php">Retour au formulaire</a>
 </p>
